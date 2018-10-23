@@ -41,10 +41,10 @@ I would recommend `europe-west1`.
 
 ## Meetings
 
-| Date | Time | Description
-| ---
-| 23/10 | 12:00 | Initial meeting
-| 30/10 | 13:00 | Infernoballs released
+Date | Time | Description
+---- | ---- | -----------
+23/10 | 12:00 | Initial meeting
+30/10 | 13:00 | Infernoballs released
 
 ## Tasks
 
