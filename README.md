@@ -17,6 +17,18 @@ Wordlists & masks:
 2. Two four-letter words concatenated (Generated from English dictionaries in Ubuntu's `/usr/share/dicts/words/`)
 3. [rockyou.txt](http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2)
 
+### Formats
+
+I've formatted the hashes as follows:
+`share:hash`
+
+Type | Command
+---- | -------
+sha1crypt | `john --format=sha1crypt-opencl --wordlist=<wordlist> <filename>`
+sha512crypt | `john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`<br/>`hashcat -m 1800 -a 0 --username <wordlist> <filename>`
+PBKDF2-HMAC-SHA256 | `john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <filename>`
+argon2i | `john --format=argon2 --wordlist=<wordlist> <filename>`
+
 ### Software
 
 JohnTheRipper seems to work better than Hashcat for PBKDF2 hashes.
