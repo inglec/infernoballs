@@ -120,8 +120,8 @@ Update all packages first and install build dependencies:
 sudo apt update
 sudo apt upgrade
 
-sudo apt-get install build-essential
-sudo apt-get install linux-image-extra-virtual
+sudo apt install build-essential
+sudo apt install linux-image-extra-virtual
 ```
 
 Install P100 drivers:
@@ -136,8 +136,7 @@ Install JohnTheRipper:
 ```
 sudo apt install libssl-dev git zlib1g-dev
 sudo apt install yasm libgmp-dev libpcap-dev pkg-config libbz2-dev
-
-sudo apt-get install nvidia-opencl-dev
+sudo apt install nvidia-opencl-dev
 
 git clone git://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo jtr
 ```
