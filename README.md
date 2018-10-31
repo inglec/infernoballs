@@ -33,7 +33,7 @@ Type | Program | Device | Hashrate
 ---- | ------- | ------ | --------
 PBKDF2-HMAC-SHA256 | JohnTheRipper | P100 | `40,000c/S`
 sha1crypt | JohnTheRipper | P100 | `7,060c/S`
-sha512crypt | JohnTheRipper <br/> Hashcat | P100 <br/> Hashcat | 
+sha512crypt | JohnTheRipper <br/> Hashcat | P100 <br/> P100 | TODO <br/> TODO
 argon2i | JohnTheRipper | c5.9x | `90c/S`
 
 ### Software
