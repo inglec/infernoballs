@@ -21,13 +21,13 @@ Wordlists & masks:
 
 I've formatted the hashes as follows: `share:hash`.
 
-| Type               | Command                                                                           |
-|:------------------ |:--------------------------------------------------------------------------------- |
-| PBKDF2-HMAC-SHA256 | `../run/john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <filename>` |
-| sha1crypt          | `../run/john --format=sha1crypt-opencl --wordlist=<wordlist> <filename>`          |
-| sha512crypt        | `../run/john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`        |
-|                    | `hashcat -a 0 -w 4 -O -m 1800 --username <wordlist> <filename>`                   |
-| argon2i            | `../run/john --format=argon2 --wordlist=<wordlist> <filename>`                    |
+| Type               | Command                                                                            |
+|:------------------ |:---------------------------------------------------------------------------------- |
+| PBKDF2-HMAC-SHA256 | `jtr/run/john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <filename>` |
+| sha1crypt          | `jtr/run/john --format=sha1crypt-opencl --wordlist=<wordlist> <filename>`          |
+| sha512crypt        | `jtr/run/john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`        |
+|                    | `hashcat -a 0 -w 4 -O -m 1800 --username <wordlist> <filename>`                    |
+| argon2i            | `jtr/run/john --format=argon2 --wordlist=<wordlist> <filename>`                    |
 
 ### Hashrates
 
