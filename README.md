@@ -132,7 +132,9 @@ sudo /bin/bash NVIDIA-Linux-x86_64-410.72.run
 Install [JohnTheRipper](https://www.openwall.com/john/):
 
 ```
-sudo apt install libssl-dev zlib1g-dev yasm libgmp-dev libpcap-dev pkg-config libbz2-dev nvidia-opencl-dev
+sudo apt install build-essential libssl-dev git zlib1g-dev
+sudo apt install yasm libgmp-dev libpcap-dev pkg-config libbz2-dev
+sudo apt install nvidia-opencl-dev
 
 git clone git://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo jtr
 
