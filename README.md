@@ -81,7 +81,8 @@ sha1crypt:
 1. `five.txt`: 0 cracked. (Ciarán)
 2. `fourfour.txt`: 0 cracked. (Ciarán)
 3. `rockyou_9char.txt`: 0 cracked. (Ciarán)
-4. `rockyou_7char.txt`: In progress... (Ciarán)
+4. `rockyou_6char.txt`: 10 cracked. (Ciarán)
+5. `rockyou_6char.txt`: In progress... (Ciarán)
 
 sha512crypt:
 
