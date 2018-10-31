@@ -29,12 +29,21 @@ sha512crypt | `john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>
 argon2i | `john --format=argon2 --wordlist=<wordlist> <filename>`
 
 ### Hashrates
-Type | Program | Device | Hashrate
----- | ------- | ------ | --------
-PBKDF2-HMAC-SHA256 | JohnTheRipper | P100 <br/> c5.9x | `40,000c/S` <br/> `17,700c/S`
-sha1crypt | JohnTheRipper | P100 <br/> c5.9x | `7,060c/S` <br/> `2,500c/S`
-sha512crypt | JohnTheRipper <br/> Hashcat | P100 <br/> c5.9x <br/> P100 | TODO <br/> `600c/S` <br/> TODO
-argon2i | JohnTheRipper | c5.9x | `100c/S`
+
+#### John The Ripper
+
+Type | Device | Hashrate
+---- | ------ | --------
+PBKDF2-HMAC-SHA256 | P100 <br/> 1080Ti <br/> c5.9x | `40,000c/S` <br/> TODO <br/> `17,700c/S`
+sha1crypt | P100 <br/> 1080Ti <br/> c5.9x | `7,060c/S` <br/> TODO <br/> `2,500c/S`
+sha512crypt | P100 <br/> 1080Ti <br/> c5.9x | TODO <br/> TODO <br/> `600c/S`
+argon2i | c5.9x | `100c/S`
+
+#### Hashcat
+
+Type | Device | Hashrate
+---- | ------ | --------
+sha512crypt | P100 <br/> 1080Ti <br/> c5.9x | TODO <br/> TODO <br/> `600c/S`
 
 ### Software
 
