@@ -136,7 +136,7 @@ sudo apt install libssl-dev zlib1g-dev yasm libgmp-dev libpcap-dev pkg-config li
 
 git clone git://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo jtr
 
-# Navigate to `jtr/src/`
+cd jtr/src/
 ./configure && make -s clean && make -sj4
 ```
 
