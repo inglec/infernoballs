@@ -69,7 +69,7 @@ Level 1 seems to only require `rockyou.txt`.
 |:------------------ |:-------:|
 | PBKDF2-HMAC-SHA256 | 65/65   |
 | sha1crypt          | 0/50    |
-| sha512crypt        | 2/58    |
+| sha512crypt        | 12/58   |
 | argon2i            | 0/56    |
 
 PBKDF2-HMAC-SHA256:
@@ -90,7 +90,8 @@ sha512crypt:
 2. `rockyou_3char.txt`: 0 cracked. (Sridhar)
 3. `rockyou_4char.txt`: 0 cracked. (Sridhar)
 4. `rockyou_5char.txt`: 2 cracked. (Sridhar)
-5. `rockyou_6char.txt`: In progress... (Sridhar)
+5. `rockyou_6char.txt`: In progress... (Debrup)
+6. `rockyou_7char.txt`: In progress... (Sridhar)
 
 argon2i:
 1. `rockyou_5char.txt`: In progress... (Ciarán)
