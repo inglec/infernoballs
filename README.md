@@ -31,10 +31,10 @@ argon2i | `john --format=argon2 --wordlist=<wordlist> <filename>`
 ### Hashrates
 Type | Hashrate
 ---- | -------
-PBKDF2-HMAC-SHA256 | JTR P100: 40,000c/S
-sha1crypt | JTR P100: 7,060c/S
+PBKDF2-HMAC-SHA256 | JTR P100: `40,000c/S`
+sha1crypt | JTR P100: `7,060c/S`
 sha512crypt | 
-argon2i | 
+argon2i | JTR c5.9x: `90c/S`
 
 ### Software
 
