@@ -119,7 +119,8 @@ Update all packages first and install build dependencies:
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install build-essential linux-image-extra-virtual
+sudo apt install build-essential
+sudo apt install linux-image-extra-virtual
 ```
 
 Install NVIDIA Tesla P100 drivers:
