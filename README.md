@@ -24,7 +24,7 @@ I've formatted the hashes as follows: `share:hash`.
 Type | Command
 ---- | -------
 sha1crypt | `john --format=sha1crypt-opencl --wordlist=<wordlist> <filename>`
-sha512crypt | `john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`<br/>`hashcat -m 1800 -a 0 -w 4 -O --username <wordlist> <filename>`
+sha512crypt | `john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`<br/>`hashcat -a 0 -w 4 -O -m 1800 --username <wordlist> <filename>`
 PBKDF2-HMAC-SHA256 | `john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <filename>`
 argon2i | `john --format=argon2 --wordlist=<wordlist> <filename>`
 
