@@ -72,6 +72,17 @@ Level 1 seems to only require `rockyou.txt`.
 | sha512crypt        | 0/58    |
 | argon2i            | 0/56    |
 
+PBKDF2-HMAC-SHA256:
+1. rockyou.txt: 65 cracked. (Ciarán)
+
+sha1crypt:
+1. five.txt: 0 cracked. (Ciarán)
+2. fourfour.txt: 0 cracked. (Ciarán)
+3. rockyou_9char.txt: 0 cracked. (Ciarán)
+
+argon2i:
+1. rockyou_5char.txt: In progress... (Ciarán)
+
 ## Instances
 
 ### AWS / RosettaHub
