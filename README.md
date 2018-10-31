@@ -30,7 +30,7 @@ argon2i | `john --format=argon2 --wordlist=<wordlist> <filename>`
 
 ### Hashrates
 Type | Program | Device | Hashrate
----- | -------
+---- | ------- | ------ | --------
 PBKDF2-HMAC-SHA256 | JohnTheRipper | P100 | `40,000c/S`
 sha1crypt | JohnTheRipper | P100 | `7,060c/S`
 sha512crypt | JohnTheRipper <br/> Hashcat | P100 <br/> Hashcat | 
