@@ -43,7 +43,7 @@ argon2i | c5.9x | `100c/S`
 
 Type | Device | Hashrate
 ---- | ------ | --------
-sha512crypt | P100 <br/> 1080Ti | TODO <br/> TODO
+sha512crypt | P100 <br/> 1080Ti | TODO <br/> 160H/s
 
 ### Software
 
