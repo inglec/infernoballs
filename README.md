@@ -29,12 +29,12 @@ sha512crypt | `john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>
 argon2i | `john --format=argon2 --wordlist=<wordlist> <filename>`
 
 ### Hashrates
-Type | Hashrate
+Type | Program | Device | Hashrate
 ---- | -------
-PBKDF2-HMAC-SHA256 | JTR P100: `40,000c/S`
-sha1crypt | JTR P100: `7,060c/S`
-sha512crypt | 
-argon2i | JTR c5.9x: `90c/S`
+PBKDF2-HMAC-SHA256 | JohnTheRipper | P100 | `40,000c/S`
+sha1crypt | JohnTheRipper | P100 | `7,060c/S`
+sha512crypt | JohnTheRipper <br/> Hashcat | P100 <br/> Hashcat | 
+argon2i | JohnTheRipper | c5.9x | `90c/S`
 
 ### Software
 
