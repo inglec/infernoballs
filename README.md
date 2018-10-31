@@ -79,6 +79,7 @@ sha1crypt:
 1. `five.txt`: 0 cracked. (Ciarán)
 2. `fourfour.txt`: 0 cracked. (Ciarán)
 3. `rockyou_9char.txt`: 0 cracked. (Ciarán)
+4. `rockyou_7char.txt`: In progress... (Ciarán)
 
 argon2i:
 1. `rockyou_5char.txt`: In progress... (Ciarán)
