@@ -75,7 +75,7 @@ You are limited to a single GPU across all instances unless you request a limit 
 
 ## Meetings
 
-Date | Time | Description | Location
----- | ---- | ----------- | --------
-23/10 | 12:00 | Initial meeting | South Leinster St.
-30/10 | 18:00 | Infernoballs released | South Leinster St.
+Date | Time | Location | Description
+---- | ---- | -------- | -----------
+23/10 | 12:00 | South Leinster St. | Initial meeting
+30/10 | 18:00 | South Leinster St. | Infernoballs released
