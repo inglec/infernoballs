@@ -23,11 +23,11 @@ I've formatted the hashes as follows: `share:hash`.
 
 | Type               | Command                                                                    |
 |:------------------ |:-------------------------------------------------------------------------- |
-| PBKDF2-HMAC-SHA256 | `john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <filename>` |
-| sha1crypt          | `john --format=sha1crypt-opencl --wordlist=<wordlist> <filename>`          |
-| sha512crypt        | `john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`        |
+| PBKDF2-HMAC-SHA256 | `../run/john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <filename>` |
+| sha1crypt          | `../run/john --format=sha1crypt-opencl --wordlist=<wordlist> <filename>`          |
+| sha512crypt        | `../run/john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`        |
 |                    | `hashcat -a 0 -w 4 -O -m 1800 --username <wordlist> <filename>`            |
-| argon2i            | `john --format=argon2 --wordlist=<wordlist> <filename>`                    |
+| argon2i            | `../run/john --format=argon2 --wordlist=<wordlist> <filename>`                    |
 
 ### Hashrates
 
@@ -86,7 +86,7 @@ sha1crypt:
 sha512crypt:
 
 1. `rockyou_2char.txt`: 0 cracked. (Sridhar)
-2. `rockyou_3char.txt`: 0 cracked. (Sridhar) 
+2. `rockyou_3char.txt`: 0 cracked. (Sridhar)
 3. `rockyou_4char.txt`: 0 cracked. (Sridhar)
 4. `rockyou_5char.txt`: 2 cracked. (Sridhar)
 5. `rockyou_6char.txt`: In progress... (Sridhar)
