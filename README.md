@@ -49,7 +49,7 @@ I've formatted the hashes as follows: `share:hash`.
 #### Hashcat
 
 | Type        | Device | Hashrate |
-|:----------- |:----- :| --------:|
+|:----------- |:------:| --------:|
 | sha512crypt | P100   | TODO     |
 |             | 1080Ti | 150H/s   |
 
