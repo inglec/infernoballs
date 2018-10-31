@@ -129,7 +129,7 @@ wget http://uk.download.nvidia.com/tesla/410.72/NVIDIA-Linux-x86_64-410.72.run
 sudo /bin/bash NVIDIA-Linux-x86_64-410.72.run
 ```
 
-Install JohnTheRipper:
+Install [JohnTheRipper](https://www.openwall.com/john/):
 
 ```
 sudo apt install libssl-dev zlib1g-dev yasm libgmp-dev libpcap-dev pkg-config libbz2-dev nvidia-opencl-dev
@@ -140,7 +140,7 @@ cd jtr/src/
 ./configure && make -s clean && make -sj4
 ```
 
-Install Hashcat:
+Install [Hashcat](https://hashcat.net/hashcat/):
 
 ```
 sudo apt install hashcat
