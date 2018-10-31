@@ -21,29 +21,37 @@ Wordlists & masks:
 
 I've formatted the hashes as follows: `share:hash`.
 
-Type | Command
----- | -------
-PBKDF2-HMAC-SHA256 | `john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <filename>`
-sha1crypt | `john --format=sha1crypt-opencl --wordlist=<wordlist> <filename>`
-sha512crypt | `john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`<br/>`hashcat -a 0 -w 4 -O -m 1800 --username <wordlist> <filename>`
-argon2i | `john --format=argon2 --wordlist=<wordlist> <filename>`
+| Type               | Command                                                                    |
+|:------------------ |:-------------------------------------------------------------------------- |
+| PBKDF2-HMAC-SHA256 | `john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <filename>` |
+| sha1crypt          | `john --format=sha1crypt-opencl --wordlist=<wordlist> <filename>`          |
+| sha512crypt        | `john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`        |
+|                    | `hashcat -a 0 -w 4 -O -m 1800 --username <wordlist> <filename>`            |
+| argon2i            | `john --format=argon2 --wordlist=<wordlist> <filename>`                    |
 
 ### Hashrates
 
 #### John The Ripper
 
-Type | Device | Hashrate
----- | ------ | --------
-PBKDF2-HMAC-SHA256 | P100 <br/> 1080Ti <br/> c5.9x | `40,000c/S` <br/> TODO <br/> `17,700c/S`
-sha1crypt | P100 <br/> 1080Ti <br/> c5.9x | `7,060c/S` <br/> TODO <br/> `2,500c/S`
-sha512crypt | P100 <br/> 1080Ti <br/> c5.9x | TODO <br/> TODO <br/> `600c/S`
-argon2i | c5.9x | `100c/S`
+| Type               | Device | Hashrate    |
+|:------------------ |:------:| -----------:|
+| PBKDF2-HMAC-SHA256 | P100   | 40,000c/S   |
+|                    | 1080Ti | TODO <br/>  |
+|                    | c5.9x  | 17,700c/S   |
+| sha1crypt          | P100   | 7,060c/S    |
+|                    | 1080Ti | TODO        |
+|                    | c5.9x  | 2,500c/S    |
+| sha512crypt        | P100   | TODO        |
+|                    | 1080Ti | TODO        |
+|                    | c5.9x  | 600c/S      |
+| argon2i            | c5.9x  | 100c/S      |
 
 #### Hashcat
 
-Type | Device | Hashrate
----- | ------ | --------
-sha512crypt | P100 <br/> 1080Ti | TODO <br/> `150H/s`
+| Type        | Device | Hashrate |
+|:----------- |:----- :| --------:|
+| sha512crypt | P100   | TODO     |
+|             | 1080Ti | 150H/s   |
 
 ### Software
 
@@ -57,12 +65,12 @@ Otherwise, Hashcat appears to be better.
 
 Level 1 seems to only require `rockyou.txt`.
 
-Type | Amount
----- | -------
-PBKDF2-HMAC-SHA256 | 65/65
-sha1crypt | 0/50
-sha512crypt | 0/58
-argon2i | 0/56
+| Type               | Amount  |
+|:------------------ |:-------:|
+| PBKDF2-HMAC-SHA256 | 65/65   |
+| sha1crypt          | 0/50    |
+| sha512crypt        | 0/58    |
+| argon2i            | 0/56    |
 
 ## Instances
 
@@ -84,7 +92,7 @@ You are limited to a single GPU across all instances unless you request a limit 
 
 ## Meetings
 
-Date | Time | Location | Description
----- | ---- | -------- | -----------
-23/10 | 12:00 | South Leinster St. | Initial meeting
-30/10 | 18:00 | South Leinster St. | Infernoballs released
+| Date  | Time  | Location           | Description           |
+|:-----:|:-----:|:------------------ |:--------------------- |
+| 23/10 | 12:00 | South Leinster St. | Initial meeting       |
+| 30/10 | 18:00 | South Leinster St. | Infernoballs released |
