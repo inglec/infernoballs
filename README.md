@@ -119,7 +119,6 @@ Update all packages first and install build dependencies:
 ```
 sudo apt update
 sudo apt upgrade
-
 sudo apt install build-essential linux-image-extra-virtual
 ```
 
@@ -136,11 +135,8 @@ Install JohnTheRipper:
 sudo apt install libssl-dev git zlib1g-dev yasm libgmp-dev libpcap-dev pkg-config libbz2-dev nvidia-opencl-dev
 
 git clone git://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo jtr
-```
 
-Navigate to `jtr/src/`:
-
-```
+# Navigate to `jtr/src/`
 ./configure && make -s clean && make -sj4
 ```
 
