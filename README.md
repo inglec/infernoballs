@@ -122,7 +122,7 @@ sudo apt upgrade
 sudo apt install build-essential linux-image-extra-virtual
 ```
 
-Install P100 drivers:
+Install NVIDIA TESLA P100 drivers:
 
 ```
 wget http://uk.download.nvidia.com/tesla/410.72/NVIDIA-Linux-x86_64-410.72.run
