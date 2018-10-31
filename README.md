@@ -33,24 +33,24 @@ I've formatted the hashes as follows: `share:hash`.
 
 #### John The Ripper
 
-| Type               | Device | Hashrate    |
-|:------------------ |:------:| -----------:|
-| PBKDF2-HMAC-SHA256 | P100   | 40,000c/S   |
-|                    | 1080Ti | TODO <br/>  |
-|                    | c5.9x  | 17,700c/S   |
-| sha1crypt          | P100   | 7,060c/S    |
-|                    | 1080Ti | TODO        |
-|                    | c5.9x  | 2,500c/S    |
-| sha512crypt        | P100   | TODO        |
-|                    | 1080Ti | TODO        |
-|                    | c5.9x  | 600c/S      |
-| argon2i            | c5.9x  | 100c/S      |
+| Type               | Device | Hashrate  |
+|:------------------ |:------:| ---------:|
+| PBKDF2-HMAC-SHA256 | P100   | 40,000c/S |
+|                    | 1080Ti | TODO      |
+|                    | c5.9x  | 17,700c/S |
+| sha1crypt          | P100   | 7,060c/S  |
+|                    | 1080Ti | TODO      |
+|                    | c5.9x  | 2,500c/S  |
+| sha512crypt        | P100   | 700c/S    |
+|                    | 1080Ti | TODO      |
+|                    | c5.9x  | 600c/S    |
+| argon2i            | c5.9x  | 100c/S    |
 
 #### Hashcat
 
 | Type        | Device | Hashrate |
 |:----------- |:------:| --------:|
-| sha512crypt | P100   | TODO     |
+| sha512crypt | P100   | 1170H/s  |
 |             | 1080Ti | 150H/s   |
 
 ### Software
