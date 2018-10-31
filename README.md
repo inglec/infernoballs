@@ -73,9 +73,11 @@ Level 1 seems to only require `rockyou.txt`.
 | argon2i            | 0/56    |
 
 PBKDF2-HMAC-SHA256:
+
 1. `rockyou.txt`: 65 cracked. (Ciarán)
 
 sha1crypt:
+
 1. `five.txt`: 0 cracked. (Ciarán)
 2. `fourfour.txt`: 0 cracked. (Ciarán)
 3. `rockyou_9char.txt`: 0 cracked. (Ciarán)
@@ -105,12 +107,15 @@ You are limited to a single GPU across all instances unless you request a limit 
 #### Setup
 
 Create a new [VM instance](https://console.cloud.google.com/compute/instances) with the following specs:
+
 ![New VM Instance](images/GCP.PNG)
 
 SSH into the instance.
+
 ![SSH Into Instance](images/SSH.PNG)
 
 Update all packages first and install build dependencies:
+
 ```
 sudo apt update
 sudo apt upgrade
@@ -120,12 +125,14 @@ sudo apt-get install linux-image-extra-virtual
 ```
 
 Install P100 drivers:
+
 ```
 wget http://uk.download.nvidia.com/tesla/410.72/NVIDIA-Linux-x86_64-410.72.run
 sudo /bin/bash NVIDIA-Linux-x86_64-410.72.run
 ```
 
 Install JohnTheRipper:
+
 ```
 sudo apt install libssl-dev git zlib1g-dev
 sudo apt install yasm libgmp-dev libpcap-dev pkg-config libbz2-dev
@@ -136,16 +143,19 @@ git clone git://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo jtr
 ```
 
 Navigate to `jtr/src/`:
+
 ```
 ./configure && make -s clean && make -sj4
 ```
 
 Install Hashcat:
+
 ```
 sudo apt install hashcat
 ```
 
 Clone the Git repo:
+
 ```
 git clone https://github.com/inglec/infernoballs
 ```
