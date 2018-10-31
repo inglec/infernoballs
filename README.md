@@ -19,21 +19,41 @@ Wordlists & masks:
 
 ### Formats
 
-I've formatted the hashes as follows:
-`share:hash`
+I've formatted the hashes as follows: `share:hash`.
 
 Type | Command
 ---- | -------
 sha1crypt | `john --format=sha1crypt-opencl --wordlist=<wordlist> <filename>`
-sha512crypt | `john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`<br/>`hashcat -m 1800 -a 0 --username <wordlist> <filename>`
+sha512crypt | `john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`<br/>`hashcat -m 1800 -a 0 -w 4 -O --username <wordlist> <filename>`
 PBKDF2-HMAC-SHA256 | `john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <filename>`
 argon2i | `john --format=argon2 --wordlist=<wordlist> <filename>`
+
+### Hashrates
+Type | Hashrate
+---- | -------
+sha1crypt | JTR P100: 7,060c/S
+sha512crypt | 
+PBKDF2-HMAC-SHA256 | JTR P100: 40,000c/S
+argon2i | 
 
 ### Software
 
 JohnTheRipper seems to work better than Hashcat for PBKDF2 hashes.
 
 Otherwise, Hashcat appears to be better.
+
+### Progress
+
+#### Level 1
+
+Level 1 seems to only require `rockyou.txt`.
+
+Type | Amount
+---- | -------
+sha1crypt | 0/50
+sha512crypt | 0/58
+PBKDF2-HMAC-SHA256 | 65/65
+argon2i | 0/56
 
 ## Instances
 
@@ -59,8 +79,3 @@ Date | Time | Description
 ---- | ---- | -----------
 23/10 | 12:00 | Initial meeting
 30/10 | 13:00 | Infernoballs released
-
-## Tasks
-
-Todo:
-1. Make a wordlist from Dante's Inferno.
