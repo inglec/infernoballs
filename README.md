@@ -10,7 +10,7 @@ Group Members:
 
 ## Scripts
 
-Potfile to broken format:
+Potfile to broken format (Only required for Hashcat):
 ```
 python brokenToPotfile.py <potfile> > output.broken
 ```
