@@ -129,6 +129,7 @@ def newhash(p):
 # modified from https://www.quickprogrammingtips.com/python/aes-256-encryption-and-decryption-in-python.html
 BLOCK_SIZE = 16
 pad = lambda s: s + (BLOCK_SIZE - len(s) % BLOCK_SIZE) * chr(BLOCK_SIZE - len(s) % BLOCK_SIZE)
+unpad = lambda s: s[:-ord(s[len(s) - 1:])]
 
 def encrypt(raw, key):
     raw = pad(raw)
@@ -333,10 +334,11 @@ def recoverSecret(args):
 
     # Decrypt next level of infernoball.
     ciphertext = open(args.ciphertext).readline()
-    nextLevel = decrypt(ciphertext, secret);
+    print len(ciphertext)
+    nextLevel = decrypt(ciphertext, secret.zfill(32).decode('hex'));
 
     print "Success! Outputted next level to " + output
-    output = open(output)
+    output = open(output, "w")
     output.write(nextLevel)
 
 # getopt handling
