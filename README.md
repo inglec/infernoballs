@@ -103,7 +103,7 @@ Level 1 seems to only require `rockyou.txt`.
 | Type               | Amount  |
 |:------------------ |:-------:|
 | PBKDF2-HMAC-SHA256 | 65/65   |
-| sha1crypt          | 50/50    |
+| sha1crypt          | 50/50   |
 | sha512crypt        | 44/58   |
 | argon2i            | 0/56    |
 
@@ -136,6 +136,12 @@ argon2i:
 
 ## Instances
 
+Clone the Git repo:
+
+```
+git clone https://github.com/inglec/infernoballs
+```
+
 ### AWS / RosettaHub
 
 The `c5.9xlarge` instance seems to be the best CPU instance you can rent. It is a 32-thread CPU with AVX-512.
@@ -144,66 +150,7 @@ This is the best instance for cracking Argon2.
 
 ### Google Cloud Platform
 
-Google Cloud Platform's [Compute Engine](https://console.cloud.google.com/compute/) offers $300 free credit.
-
-A custom instance with two threads and a single P100 GPU seems to be the best overall instance for cracking everything apart from Argon2. Certain regions such as `europe-west2` will **not** allow you to access a GPU instance.
-
-I would recommend `europe-west1`.
-
-You are limited to a single GPU across all instances unless you request a limit increase.
-
-#### Setup
-
-Create a new [VM instance](https://console.cloud.google.com/compute/instances) with the following specs:
-
-![New VM Instance](images/GCP.PNG)
-
-SSH into the instance.
-
-![SSH Into Instance](images/SSH.PNG)
-
-Update all packages first and install build dependencies:
-
-```
-sudo apt update
-sudo apt upgrade
-sudo apt install build-essential
-sudo apt install linux-image-extra-virtual
-```
-
-Install NVIDIA Tesla P100 drivers:
-
-```
-wget http://uk.download.nvidia.com/tesla/410.72/NVIDIA-Linux-x86_64-410.72.run
-sudo /bin/bash NVIDIA-Linux-x86_64-410.72.run
-```
-
-Install [JohnTheRipper](https://www.openwall.com/john/):
-
-```
-sudo apt install build-essential libssl-dev git zlib1g-dev
-sudo apt install yasm libgmp-dev libpcap-dev pkg-config libbz2-dev
-sudo apt install nvidia-opencl-dev
-
-git clone git://github.com/magnumripper/JohnTheRipper -b bleeding-jumbo jtr
-
-cd jtr/src/
-./configure && make -s clean && make -sj4
-```
-
-Install [Hashcat](https://hashcat.net/hashcat/):
-
-```
-sudo apt install hashcat
-```
-
-Clone the Git repo:
-
-```
-git clone https://github.com/inglec/infernoballs
-```
-
-And you're done!
+I moved the setup guide to [here](https://github.com/inglec/Google-Cloud-Cracking-Setup).
 
 ## Meetings
 
