@@ -10,17 +10,38 @@ Group Members:
 
 ## Scripts
 
-Useful bash script for combining all the hash files:
+Potfile to broken format:
+```
+python brokenToPotfile.py <potfile> > output.broken
+```
+
+Combine all hash files:
 
 ```
 cat *.broken | sort | uniq > all.broken
 ```
 
 Decrypting the ciphertext for a given level:
-```
-./as5-makeinferno.py -t decrypt -c <path_to_ciphertext> -b <path_to_broken> 
 
 ```
+./as5-makeinferno.py -t decrypt -c <path_to_ciphertext> -b <path_to_broken> -H <path_to_hashes> [-o <path_to_output>]
+
+# Sample usage
+./as5-makeinferno.py -t decrypt -c ciphertexts/ciphertext1.txt -b broken/all.broken -H hashes/infernoball1.hashes -o infernoballs/infernoball2.as5
+```
+
+Get hashes from infernoball:
+
+```
+python getHashesFromJSON <infernoball> > infernoballN.broken
+```
+
+Get ciphertext from infernoball:
+
+```
+python getCiphertextFromJSON <infernoball> > ciphertextN.txt
+```
+
 
 ## Hashes
 
