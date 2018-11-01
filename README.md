@@ -8,6 +8,20 @@ Group Members:
 
 [Link](https://github.com/sftcd/cs7ns1/tree/master/assignments/practical5) to the assignment's GitHub repo.
 
+## Scripts
+
+Useful bash script for combining all the hash files:
+
+```
+cat *.broken | sort | uniq > all.broken
+```
+
+Decrypting the ciphertext for a given level:
+```
+./as5-makeinferno.py -t decrypt -c <path_to_ciphertext> -b <path_to_broken> 
+
+```
+
 ## Hashes
 
 ### Methods
