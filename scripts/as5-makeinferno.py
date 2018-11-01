@@ -300,7 +300,7 @@ def usageRecoverSecret():
     sys.exit(1)
 
 def recoverSecret(args):
-    # defaults for some command line arguments (CLAs)
+    # Defaults for some command line arguments (CLAs)
     output = 'nextLevel.json' # level of nesting
 
     if args.output is not None:
@@ -310,7 +310,7 @@ def recoverSecret(args):
         usageRecoverSecret()
 
     hashes = open(args.hashes).readlines()
-    shares = list(map(lambda l: l.split(':')[0], hashes)) # Remove hashes from shares.
+    shares = list(map(lambda l: l.split(':')[0], hashes)) # Isolate shares.
 
     broken = open(args.broken).readlines()
 
@@ -329,7 +329,7 @@ def recoverSecret(args):
 
     # Recover secret from shares.
     secret = pwds_shares_to_secret(words, indices, shares)
-    print "Calculated secret:" + secret
+    print "Calculated secret: " + secret
 
     # Decrypt next level of infernoball.
     ciphertext = open(args.ciphertext).readline()
