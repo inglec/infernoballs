@@ -92,7 +92,7 @@ sha512crypt:
 2. `rockyou_3char.txt`: 0 cracked. (Sridhar)
 3. `rockyou_4char.txt`: 0 cracked. (Sridhar)
 4. `rockyou_5char.txt`: 2 cracked. (Sridhar)
-5. `rockyou_6char.txt`: In progress... (Debrup)
+5. `rockyou_6char.txt`: 12 cracked (Debrup)
 6. `rockyou_7char.txt`: 17 cracked (Sridhar)
 
 argon2i:
