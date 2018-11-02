@@ -19,14 +19,9 @@ def satisfiesConstraint(word):
 
 def next(prefix, remaining):
 	if remaining == 0:
-<<<<<<< HEAD
         # We may only want to retain certain words.
 		if satisfiesConstraint(prefix):
             print(prefix)
-=======
-		if hasAdjacentConsonants(prefix):
-			print(prefix)
->>>>>>> b01db906c4de59f06f4b097b990bbd3c45ca321f
 	else:
 		for c in charset:
 			next(prefix + c, remaining - 1)
