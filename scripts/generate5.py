@@ -7,7 +7,7 @@ digits = '0123456789'
 
 charset = letters + digits
 
-def numberCount(word)
+def numberCount(word):
     count = 0
     for c in word:
         if c in digits:
