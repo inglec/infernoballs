@@ -10,6 +10,15 @@ Group Members:
 
 ## Scripts
 
+Python dependencies for `as5-makeinferno.py`:
+
+```
+sudo apt install python-pip
+
+sudo -H pip install secretsharing jsonpickle passlib argon2_cffi pycrypto
+
+```
+
 Potfile to broken format (Only required for Hashcat):
 ```
 python brokenToPotfile.py <potfile> > output.broken
