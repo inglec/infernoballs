@@ -1,21 +1,29 @@
-letters = "abcdefghijklmnopqrstuvwxyz"
-vowels = "aeiouh"
+# lowercase charset
+vowels = 'aeiou'
+consonants = 'bcdfghjklmnpqrstvwxyz'
+letters = consonants + vowels
 
-def isConsonant(c):
-	return c not in vowels
+digits = '0123456789'
 
-def hasAdjacentConsonants(word):
-	for i in range(0, len(word)-1):
-		if isConsonant(word[i]) and isConsonant(word[i+1]):
-			return True
-	return False
+charset = letters + digits
+
+def hasVowel(word):
+    for c in word:
+        if c in vowels:
+            return true
+    return false
+
+# Modify this function to reduce the size of the wordlist.
+def satisfiesConstraint(word):
+    return hasVowel(word) and hasNumber(word)
 
 def next(prefix, remaining):
 	if remaining == 0:
-		if not hasAdjacentConsonants(prefix):
-			print(prefix)
+        # We may only want to retain certain words.
+		if satisfiesConstraint(prefix):
+            print(prefix)
 	else:
-		for l in letters:
-			next(prefix + l, remaining - 1)
+		for c in charset:
+			next(prefix + c, remaining - 1)
 
 next("", 5)
