@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import os, sys, argparse, tempfile, shutil
+import os, sys, argparse, tempfile, shutil, json
 
 # notes on secretsharing module below:
 # - sudo -H pip install secret-sharing is needed first
@@ -297,35 +297,40 @@ def createShares(args):
         shutil.rmtree(tmpdir, ignore_errors = True)
 
 def usageRecoverSecret():
-    print >> sys.stderr, "Usage: " + sys.argv[0] + " -t decrypt -c <path_to_ciphertext> -H <path_to_hashes> -b <path_to_broken>"
+    print >> sys.stderr, "Usage: " + sys.argv[0] + " -t decrypt -i <infernoball> -b <broken>"
     sys.exit(1)
 
 def recoverSecret(args):
-    # Defaults for some command line arguments (CLAs)
-    output = 'nextLevel.json' # level of nesting
-
-    if args.output is not None:
-        output = args.output
-
-    if args.ciphertext is None or args.broken is None or args.hashes is None:
+    if args.infernoball is None or args.broken is None:
         usageRecoverSecret()
 
-    hashes = open(args.hashes).readlines()
-    shares = list(map(lambda l: l.split(':')[0], hashes)) # Isolate shares.
+    # Parse JSON infernoball.
+    string = "".join(open(args.infernoball).readlines())
+    infernoball = json.loads(string)
+    print "Loaded infernoball"
 
+    # Convert UTF-8 shares to ASCII.
+    shares = list(map(lambda s: s.encode('ascii'), infernoball['shares']))
+
+    # Load share:broken file.
     broken = open(args.broken).readlines()
+    print "Loaded broken hashes"
 
-    indices = [] # Index of corresponding word
+    nBroken = len(broken)
+    nShares = len(infernoball['shares'])
+    print "Attempting with " + str(nBroken) + "/" + str(nShares) + " (" + str(nBroken / float(nShares) * 100) +  "%) broken shares"
+
+    indices = [] # Index of word in infernoballs shares.
     words = []
-
     for entry in broken:
         split = entry.strip().split(':')
-        share = split[0]
-        hexIndex = share.split('-')[0]
-        index = int(hexIndex, 16) - 1
-        word = split[1]
 
+        share = split[0]
+        hexIndex = share.split('-')[0] # Get index of share.
+        index = int(hexIndex, 16) - 1 # Convert to int.
         indices.append(index)
+
+        word = split[1]
         words.append(word)
 
     # Recover secret from shares.
@@ -333,13 +338,40 @@ def recoverSecret(args):
     print "Calculated secret: " + secret
 
     # Decrypt next level of infernoball.
-    ciphertext = open(args.ciphertext).readline()
-    print len(ciphertext)
-    nextLevel = decrypt(ciphertext, secret.zfill(32).decode('hex'));
+    nextInfernoball = decrypt(infernoball['ciphertext'], secret.zfill(32).decode('hex'));
 
-    print "Success! Outputted next level to " + output
-    output = open(output, "w")
-    output.write(nextLevel)
+    # Check if decryption worked.
+    if 'ciphertext' in nextInfernoball:
+        print "Success! :D"
+
+        # Output paths.
+        path_outputInfernoball = 'infernoballN.as5'
+        path_outputHashes = 'infernoballN.hashes'
+        path_outputSecret = 'infernoballN.secrets'
+
+        # Write calculated secret to file.
+        file = open(path_outputSecret, "w")
+        file.write(secret)
+        print "Wrote " + path_outputSecret
+
+        # Write next infernoball to file.
+        file = open(path_outputInfernoball, "w")
+        file.write(nextInfernoball)
+        print "Wrote " + path_outputInfernoball
+
+        # Parse JSON.
+        nextInfernoball = json.loads(nextInfernoball)
+
+        # Write next hashes to file.
+        file = open(path_outputHashes, "w")
+        for i in range(0, len(nextInfernoball['hashes'])):
+            file.write(nextInfernoball['shares'][i] + ':' + nextInfernoball['hashes'][i] + '\n')
+        print "Wrote " + path_outputHashes
+
+        print "Next hint: " + nextInfernoball['easteregg']
+    else:
+        print "Failed! :("
+        print "You may need more hashes"
 
 # getopt handling
 argparser = argparse.ArgumentParser(description = 'Make as5 files for one student')
@@ -392,28 +424,16 @@ argparser.add_argument(
     help = 'encryption or decryption mode'
 )
 argparser.add_argument(
-    '-c',
-    '--ciphertext',
-    dest = 'ciphertext',
-    help = 'path to ciphertext'
+    '-i',
+    '--infernoball',
+    dest = 'infernoball',
+    help = 'path to this infernoball'
 )
 argparser.add_argument(
     '-b',
     '--broken',
     dest = 'broken',
     help = 'path to `secret:broken` file'
-)
-argparser.add_argument(
-    '-H',
-    '--hashes',
-    dest = 'hashes',
-    help = 'path to `secret:hash` file'
-)
-argparser.add_argument(
-    '-o',
-    '--output',
-    dest = 'output',
-    help = 'path to output JSON file'
 )
 args = argparser.parse_args()
 

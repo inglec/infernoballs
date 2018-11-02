@@ -20,8 +20,9 @@ sudo -H pip install secretsharing jsonpickle passlib argon2_cffi pycrypto
 ```
 
 Potfile to broken format (Only required for Hashcat):
+
 ```
-python brokenToPotfile.py <potfile> > output.broken
+python formatter.py <hashes> <potfile> > output.broken
 ```
 
 Combine all hash files:
@@ -33,30 +34,24 @@ cat *.broken | sort | uniq > all.broken
 Decrypting the ciphertext for a given level:
 
 ```
-./as5-makeinferno.py -t decrypt -c <path_to_ciphertext> -b <path_to_broken> -H <path_to_hashes> [-o <path_to_output>]
+./as5-makeinferno.py -t decrypt -i <infernoball> -b <broken>
 
 # Sample usage
-./as5-makeinferno.py -t decrypt -c ciphertexts/ciphertext1.txt -b broken/all.broken -H hashes/infernoball1.hashes -o infernoballs/infernoball2.as5
+./as5-makeinferno.py -t decrypt -i infernoballs/infernoball1.as5 -b broken/level1/all.broken
 ```
 
-Get hashes from infernoball:
+This will write three files:
 
-```
-python getHashesFromJSON <infernoball> > infernoballN.broken
-```
-
-Get ciphertext from infernoball:
-
-```
-python getCiphertextFromJSON <infernoball> > ciphertextN.txt
-```
-
+1. `infernoballN.as5`
+2. `infernoballN.secrets`
+3. `infernoballN.hashes`
 
 ## Hashes
 
 ### Methods
 
 Wordlists & masks:
+
 1. Five lowercase letters (Generated using `pwgen -0 -A 5`)
 2. Two four-letter words concatenated (Generated from English dictionaries in Ubuntu's `/usr/share/dicts/words/`)
 3. [rockyou.txt](http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2)
@@ -102,81 +97,6 @@ I've formatted the hashes as follows: `share:hash`.
 JohnTheRipper seems to work better than Hashcat for PBKDF2 hashes.
 
 Otherwise, Hashcat appears to be better.
-
-### Progress
-
-#### Level 1
-
-Level 1 seems to only require `rockyou.txt`.
-
-| Type               | Amount  |
-|:------------------ |:-------:|
-| PBKDF2-HMAC-SHA256 | 65/65   |
-| sha1crypt          | 50/50   |
-| sha512crypt        | 44/58   |
-| argon2i            | 0/56    |
-
-PBKDF2-HMAC-SHA256:
-
-1. `rockyou.txt`: 65 cracked. (Ciarán)
-
-sha1crypt:
-
-1. `five.txt`: 0 cracked. (Ciarán)
-2. `fourfour.txt`: 0 cracked. (Ciarán)
-3. `rockyou_9char.txt`: 0 cracked. (Ciarán)
-4. `rockyou_7char.txt`: 10 cracked. (Ciarán)
-5. `rockyou_6char.txt`: 17 cracked. (Ciarán)
-6. `rockyou_5char.txt`: 1 cracked. (Ciarán)
-7. `rockyou_8char.txt`: 22 cracked. (Ciarán)
-
-sha512crypt:
-
-1. `rockyou_2char.txt`: 0 cracked. (Sridhar)
-2. `rockyou_3char.txt`: 0 cracked. (Sridhar)
-3. `rockyou_4char.txt`: 0 cracked. (Sridhar)
-4. `rockyou_5char.txt`: 2 cracked. (Sridhar)
-5. `rockyou_6char.txt`: 12 cracked (Debrup)
-6. `rockyou_7char.txt`: 17 cracked (Sridhar)
-7. `rockyou_8char.txt`: 13 cracked (Debrup)
-
-argon2i:
-1. `rockyou_5char.txt`: In progress... (Ciarán)
-
-#### Level 2
-
-Level 2 seems to only require `fourfour.txt`.
-
-| Type               | Amount  |
-|:------------------ |:-------:|
-| PBKDF2-HMAC-SHA256 | 60/60   |
-| sha1crypt          | 0       |
-| sha512crypt        | 0       |
-| argon2i            | 0       |
-
-PBKDF2-HMAC-SHA256:
-
-1. `fourfour.txt`: 60 cracked. (Sridhar)
-
-#### Level 3
-
-Level 3 seems to only require `five.txt`.
-
-| Type               | Amount  |
-|:------------------ |:-------:|
-| PBKDF2-HMAC-SHA256 |  46/46  |
-| sha1crypt          | 0       |
-| sha512crypt        | 0       |
-| argon2i            | 0       |
-
-PBKDF2-HMAC-SHA256:
-
-1. `five.txt`: 60 cracked. (Ciarán)
-
-sha1crypt:
-
-1. `five.txt`(First Half): In progress... (Sridhar)
-2. `five.txt`(Second Half): In progress... (Ciarán)
 
 ## Instances
 
