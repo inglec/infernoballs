@@ -173,7 +173,7 @@ PBKDF2-HMAC-SHA256:
 
 1. `five.txt`: 60 cracked. (Ciarán)
 
-sha1crypt
+sha1crypt:
 
 1. `five.txt`(First Half): In progress... (Sridhar)
 2. `five.txt`(Second Half): In progress... (Ciarán)
