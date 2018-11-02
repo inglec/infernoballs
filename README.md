@@ -32,9 +32,6 @@ cat *.broken | sort | uniq > all.broken
 Decrypting the ciphertext for a given level:
 ```
 ./as5-makeinferno.py -t decrypt -i <infernoball> -b <broken>
-
-# Sample usage
-./as5-makeinferno.py -t decrypt -i infernoballs/infernoball1.as5 -b broken/level1/all.broken
 ```
 
 This will write three files:
