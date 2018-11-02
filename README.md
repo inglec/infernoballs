@@ -69,8 +69,8 @@ Constraints:
 
 Constraints:
 * **At least** one vowel.
-* **Exactly** one number.
-* The number at one of the last three indices.
+* **Exactly** one digit.
+* The digit at one of the last three indices.
 
 #### Level 4
 
