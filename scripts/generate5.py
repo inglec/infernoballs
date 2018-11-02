@@ -7,6 +7,13 @@ digits = '0123456789'
 
 charset = letters + digits
 
+def numberCount(word)
+    count = 0
+    for c in word:
+        if c in digits:
+            count += 1
+    return count
+
 def numberIndex(word):
     for i in range(0, len(word)):
         if word[i] in digits:
@@ -21,7 +28,7 @@ def hasVowel(word):
 
 # Modify this function to reduce the size of the wordlist.
 def satisfiesConstraint(word):
-    return hasVowel(word) and numberIndex(word) >= 2
+    return hasVowel(word) and numberCount(word) == 1 and numberIndex(word) >= 2
 
 def next(prefix, remaining):
     if remaining == 0:
