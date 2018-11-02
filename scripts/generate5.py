@@ -12,7 +12,7 @@ def hasAdjacentConsonants(word):
 
 def next(prefix, remaining):
 	if remaining == 0:
-		if not hasAdjacentConsonants(prefix):
+		if hasAdjacentConsonants(prefix):
 			print(prefix)
 	else:
 		for l in letters:
