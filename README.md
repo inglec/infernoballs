@@ -13,7 +13,6 @@ The leaderboard is [here](https://down.dsg.cs.tcd.ie/cs7ns1-leaderboard/).
 ## Scripts
 
 Python dependencies for `as5-makeinferno.py`:
-
 ```
 sudo apt install python-pip
 
@@ -21,19 +20,16 @@ sudo -H pip install secretsharing jsonpickle passlib argon2_cffi pycrypto
 ```
 
 Potfile to broken format (Only required for Hashcat):
-
 ```
 python formatter.py <hashes> <potfile> > output.broken
 ```
 
 Combine all hash files:
-
 ```
 cat *.broken | sort | uniq > all.broken
 ```
 
 Decrypting the ciphertext for a given level:
-
 ```
 ./as5-makeinferno.py -t decrypt -i <infernoball> -b <broken>
 
@@ -42,7 +38,6 @@ Decrypting the ciphertext for a given level:
 ```
 
 This will write three files:
-
 1. `infernoballN.as5`
 2. `infernoballN.secrets`
 3. `infernoballN.hashes`
@@ -51,11 +46,49 @@ This will write three files:
 
 ### Methods
 
-Wordlists & masks:
+#### Level 1
 
-1. Five lowercase letters (Generated using `pwgen -0 -A 5`)
-2. Two four-letter words concatenated (Generated from English dictionaries in Ubuntu's `/usr/share/dicts/words/`)
-3. [rockyou.txt](http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2)
+Wordlist:
+* [rockyou.txt](http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2)
+
+Constraints:
+* 5-8 characters.
+
+#### Level 2
+
+Wordlist:
+* Two four-letter words concatenated.
+* Ubuntu's `/usr/share/dicts/words/`.
+
+Constraints:
+* Second word begins with an uppercase letter.
+
+#### Level 3
+
+`pwgen -A 5`
+
+Constraints:
+* **At least** one vowel.
+* **Exactly** one number.
+* The number at one of the last three indices.
+
+#### Level 4
+
+Words scraped from the [SCSS](https://www.scss.tcd.ie//) and [Trinity](https://www.tcd.ie/) websites.
+
+#### Level 5
+
+Submitty usernames.
+
+Can be "found" on BlackBoard.
+
+#### Level 6
+
+Same as Level 1.
+
+#### Level 7
+
+Keyboard patterns (WIP).
 
 ### Formats
 
@@ -102,7 +135,6 @@ Otherwise, Hashcat appears to be better.
 ## Instances
 
 Clone the Git repo:
-
 ```
 git clone https://github.com/inglec/infernoballs
 ```
