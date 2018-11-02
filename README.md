@@ -48,8 +48,7 @@ This will write three files:
 
 #### Level 1
 
-Wordlist:
-* [rockyou.txt](http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2)
+[rockyou.txt](http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2)
 
 Constraints:
 * 5-8 characters.
