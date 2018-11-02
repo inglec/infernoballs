@@ -143,6 +143,21 @@ sha512crypt:
 argon2i:
 1. `rockyou_5char.txt`: In progress... (Ciarán)
 
+#### Level 2
+
+Level 2 seems to only require `fourfour.txt`.
+
+| Type               | Amount  |
+|:------------------ |:-------:|
+| PBKDF2-HMAC-SHA256 | 60/60   |
+| sha1crypt          | 0       |
+| sha512crypt        | 0       |
+| argon2i            | 0       |
+
+PBKDF2-HMAC-SHA256:
+
+1. `fourfour.txt`: 60 cracked. (Sridhar)
+
 ## Instances
 
 Clone the Git repo:
