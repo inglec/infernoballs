@@ -93,13 +93,13 @@ Keyboard patterns (WIP).
 
 I've formatted the hashes as follows: `share:hash`.
 
-| Type               | Command                                                                            |
-|:------------------ |:---------------------------------------------------------------------------------- |
-| PBKDF2-HMAC-SHA256 | `jtr/run/john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <filename>` |
-| sha1crypt          | `jtr/run/john --format=sha1crypt-opencl --wordlist=<wordlist> <filename>`          |
-| sha512crypt        | `jtr/run/john --format=sha512crypt-opencl --wordlist=<wordlist> <filename>`        |
-|                    | `hashcat -a 0 -w 4 -O -m 1800 --username <wordlist> <filename>`                    |
-| argon2i            | `jtr/run/john --format=argon2 --wordlist=<wordlist> <filename>`                    |
+| Type               | Command                                                                          |
+|:------------------ |:-------------------------------------------------------------------------------- |
+| PBKDF2-HMAC-SHA256 | `jtr/run/john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <hashes>` |
+| sha1crypt          | `jtr/run/john --format=sha1crypt-opencl --wordlist=<wordlist> <hashes>`          |
+| sha512crypt        | `jtr/run/john --format=sha512crypt-opencl --wordlist=<wordlist> <hashes>`        |
+|                    | `hashcat -a 0 -w 4 -O -m 1800 --username <wordlist> <hashes>`                    |
+| argon2i            | `jtr/run/john --format=argon2 --wordlist=<wordlist> <hashes>`                    |
 
 ### Hashrates
 
@@ -107,7 +107,7 @@ I've formatted the hashes as follows: `share:hash`.
 
 | Type               | Device | Hashrate  |
 |:------------------ |:------:| ---------:|
-| PBKDF2-HMAC-SHA256 | P100   | 40,000c/S |
+| PBKDF2-HMAC-SHA256 | P100   | 45,000c/S |
 |                    | 1080Ti | TODO      |
 |                    | c5.9x  | 17,700c/S |
 | sha1crypt          | P100   | 7,060c/S  |
