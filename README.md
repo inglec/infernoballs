@@ -158,6 +158,26 @@ PBKDF2-HMAC-SHA256:
 
 1. `fourfour.txt`: 60 cracked. (Sridhar)
 
+#### Level 3
+
+Level 3 seems to only require `five.txt`.
+
+| Type               | Amount  |
+|:------------------ |:-------:|
+| PBKDF2-HMAC-SHA256 |  46/46  |
+| sha1crypt          | 0       |
+| sha512crypt        | 0       |
+| argon2i            | 0       |
+
+PBKDF2-HMAC-SHA256:
+
+1. `five.txt`: 60 cracked. (Ciarán)
+
+sha1crypt
+
+1. `five.txt`(First Half): In progress... (Sridhar)
+2. `five.txt`(Second Half): In progress... (Ciarán)
+
 ## Instances
 
 Clone the Git repo:
