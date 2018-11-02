@@ -6,6 +6,7 @@ letters = consonants + vowels
 digits = '0123456789'
 
 charset = letters + digits
+charset = "".join(sorted(charset)) # Sort alphabetically.
 
 def numberCount(word):
     count = 0
