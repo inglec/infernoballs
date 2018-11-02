@@ -2,7 +2,7 @@
 
 Team 3 Members:
 1. [Ciarán Ingle](https://github.com/inglec)
-2. [Deprub Chakraborty](https://github.com/rupdeb)
+2. [Debrup Chakraborty](https://github.com/rupdeb)
 3. [Sridhar Amirneni](https://github.com/sridharamirneni)
 4. [Suprith Ramesh](https://github.com/suprithramesh)
 
