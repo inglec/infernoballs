@@ -1,12 +1,14 @@
 # CS4400 / CS7NS1: Infernoballs
 
-Group Members:
+Team 3 Members:
 1. [Ciarán Ingle](https://github.com/inglec)
 2. [Deprub Chakraborty](https://github.com/rupdeb)
 3. [Sridhar Amirneni](https://github.com/sridharamirneni)
 4. [Suprith Ramesh](https://github.com/suprithramesh)
 
 [Link](https://github.com/sftcd/cs7ns1/tree/master/assignments/practical5) to the assignment's GitHub repo.
+
+The leaderboard is [here](https://down.dsg.cs.tcd.ie/cs7ns1-leaderboard/).
 
 ## Scripts
 
