@@ -94,7 +94,7 @@ Hints:
 Uses wordlist of Submitty usernames.
 
 Hints:
-* Submitty usernames can be cracked from the [SHA256 list](https://github.com/sftcd/cs7ns1/blob/master/assignments/practical5/TeamSelection.md) of students.
+* Submitty usernames can be cracked from the [SHA256 list](https://github.com/sftcd/cs7ns1/blob/master/assignments/practical5/TeamSelection.md#pool-of-students) of students.
 * Alternatively, all student names can be [found](https://tcd.blackboard.com/webapps/blackboard/execute/displayEmail?navItem=email_select_students&course_id=_52594_1) on BlackBoard.
 
 #### Level 6
