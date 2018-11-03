@@ -61,7 +61,7 @@ cat crackstation-human-only.txt | grep ^.\\{8\\}$ > crackstation8.txt
 Uses the [rockyou.txt](http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2) wordlist.
 
 Hints:
-* Between 5-8 characters in length.
+* All words are between **5-8 characters** in length.
 
 #### Level 2
 
@@ -70,7 +70,7 @@ Uses wordlist of two four-letter words concatenated.
 These are generated from Unix's `/usr/share/dicts/words/`.
 
 Hints:
-* Second word begins with an uppercase letter.
+* In all words, the second four-letter word begins with an **uppercase** letter.
 
 #### Level 3
 
@@ -79,7 +79,7 @@ Hints:
 Hints:
 * All words contains **at least** one vowel.
 * All words contains **exactly** one digit.
-* In each word, the digit is positioned at one of the last three indices.
+* In each word, the digit is positioned at one of the **last three** indices.
 
 #### Level 4
 
