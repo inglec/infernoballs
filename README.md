@@ -65,35 +65,37 @@ Hints:
 
 #### Level 2
 
-Uses wordlist of two four-letter words concatenated.
+Uses wordlist of two four-letter words concatenated, referencing [this](https://xkcd.com/936/) XKCD comic.
 
-These are generated from Unix's `/usr/share/dicts/words/`.
+These words originate from Unix's `/usr/share/dicts/words/`.
 
 Hints:
 * In all words, the second four-letter word begins with an **uppercase** letter.
 
 #### Level 3
 
-5 character mask generated via `pwgen -A 5`.
+Uses wordlist generated from `pwgen -A 5`.
 
 Hints:
+* All words are exactly **5 characters** in length.
 * All words contains **at least** one vowel.
 * All words contains **exactly** one digit.
 * In each word, the digit is positioned at one of the **last three** indices.
 
 #### Level 4
 
-Words scraped from the [SCSS](https://www.scss.tcd.ie//) and [Trinity](https://www.tcd.ie/) websites.
+Uses wordlist scraped from the [SCSS](https://www.scss.tcd.ie//) and [Trinity](https://www.tcd.ie/) websites.
 
 Hints:
-* Can use [CeWL](https://github.com/digininja/CeWL/) to do this.
+* Can use [CeWL](https://github.com/digininja/CeWL/) to crawl websites for words.
 
 #### Level 5
 
-Submitty usernames can be cracked from the [SHA256 list](https://github.com/sftcd/cs7ns1/blob/master/assignments/practical5/TeamSelection.md) of students.
+Uses wordlist of Submitty usernames.
 
 Hints:
-* All student names can be [found](https://tcd.blackboard.com/webapps/blackboard/execute/displayEmail?navItem=email_select_students&course_id=_52594_1) on BlackBoard.
+* Submitty usernames can be cracked from the [SHA256 list](https://github.com/sftcd/cs7ns1/blob/master/assignments/practical5/TeamSelection.md) of students.
+* Alternatively, all student names can be [found](https://tcd.blackboard.com/webapps/blackboard/execute/displayEmail?navItem=email_select_students&course_id=_52594_1) on BlackBoard.
 
 #### Level 6
 
@@ -101,9 +103,10 @@ Same as Level 1.
 
 #### Level 7
 
-Use [KwProcessor](https://github.com/hashcat/kwprocessor.git) to generate keyboard walks.
+Uses wordlist of [keyboard walks](https://cyberarms.wordpress.com/2018/02/13/creating-hashcat-keymap-walking-password-wordlists/).
 
-[This](https://cyberarms.wordpress.com/2018/02/13/creating-hashcat-keymap-walking-password-wordlists/) guide details its usage.
+Hints:
+* Use [KwProcessor](https://github.com/hashcat/kwprocessor.git) to generate wordlist.
 
 #### Level 8
 
@@ -113,7 +116,8 @@ Same as Level 1.
 
 Uses [Crackstation](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm) wordlist.
 
-Ouch.
+Hints:
+* Run far away.
 
 ### Formats
 
