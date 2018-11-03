@@ -44,7 +44,7 @@ This will write three files:
 Download and extract [Crackstation](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm) human passwords:
 ```
 wget https://crackstation.net/files/crackstation-human-only.txt.gz
-gunzip crackstation-human-only.txt
+gunzip crackstation-human-only.txt.gz
 ```
 
 Get 8-character passwords: 
