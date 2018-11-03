@@ -58,14 +58,14 @@ cat crackstation-human-only.txt | grep ^.\\{8\\}$ > crackstation8.txt
 
 #### Level 1
 
-[rockyou.txt](http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2) wordlist.
+Uses the [rockyou.txt](http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2) wordlist.
 
 Hints:
 * Between 5-8 characters in length.
 
 #### Level 2
 
-Two four-letter words concatenated.
+Uses wordlist of two four-letter words concatenated.
 
 These are generated from Unix's `/usr/share/dicts/words/`.
 
@@ -77,21 +77,23 @@ Hints:
 5 character mask generated via `pwgen -A 5`.
 
 Hints:
-* **At least** one vowel.
-* **Exactly** one digit.
-* The digit is at one of the last three indices.
+* All words contains **at least** one vowel.
+* All words contains **exactly** one digit.
+* In each word, the digit is positioned at one of the last three indices.
 
 #### Level 4
 
 Words scraped from the [SCSS](https://www.scss.tcd.ie//) and [Trinity](https://www.tcd.ie/) websites.
 
-Can use [CeWL](https://github.com/digininja/CeWL/) to do this.
+Hints:
+* Can use [CeWL](https://github.com/digininja/CeWL/) to do this.
 
 #### Level 5
 
 Submitty usernames can be cracked from the [SHA256 list](https://github.com/sftcd/cs7ns1/blob/master/assignments/practical5/TeamSelection.md) of students.
 
-Alternatively, these can be [found](https://tcd.blackboard.com/webapps/blackboard/execute/displayEmail?navItem=email_select_students&course_id=_52594_1) on BlackBoard.
+Hints:
+* All student names can be [found](https://tcd.blackboard.com/webapps/blackboard/execute/displayEmail?navItem=email_select_students&course_id=_52594_1) on BlackBoard.
 
 #### Level 6
 
