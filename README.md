@@ -39,6 +39,19 @@ This will write three files:
 2. `infernoballN.secrets`
 3. `infernoballN.hashes`
 
+#### Crackstation
+
+Download and extract Crackstation human passwords:
+```
+wget https://crackstation.net/files/crackstation-human-only.txt.gz
+gunzip crackstation-human-only.txt
+```
+
+Get 8-character passwords: 
+```
+cat crackstation-human-only.txt | grep ^.\\{8\\}$ > crackstation8.txt
+```
+
 ## Hashes
 
 ### Methods
