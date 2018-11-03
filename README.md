@@ -83,7 +83,8 @@ Constraints:
 
 #### Level 4
 
-Words scraped from the [SCSS](https://www.scss.tcd.ie//) and [Trinity](https://www.tcd.ie/) websites.
+Wordlist scraped from the [SCSS](https://www.scss.tcd.ie//) and [Trinity](https://www.tcd.ie/) websites.
+Can use [CeWL](https://github.com/digininja/CeWL/) to do this.
 
 #### Level 5
 
@@ -97,7 +98,18 @@ Same as Level 1.
 
 #### Level 7
 
-Keyboard patterns (WIP).
+Use [KwProcessor](https://github.com/hashcat/kwprocessor.git).
+
+[This](https://cyberarms.wordpress.com/2018/02/13/creating-hashcat-keymap-walking-password-wordlists/) guide details its usage.
+
+#### Level 8
+
+Same as Level 1.
+
+#### Level 9
+
+Lord hear us.
+Uses [Crackstation](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm) wordlist.
 
 ### Formats
 
