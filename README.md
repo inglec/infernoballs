@@ -58,39 +58,40 @@ cat crackstation-human-only.txt | grep ^.\\{8\\}$ > crackstation8.txt
 
 #### Level 1
 
-[rockyou.txt](http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2)
+[rockyou.txt](http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2) wordlist.
 
-Constraints:
-* 5-8 characters.
+Hints:
+* Between 5-8 characters in length.
 
 #### Level 2
 
-Wordlist:
-* Two four-letter words concatenated.
-* Ubuntu's `/usr/share/dicts/words/`.
+Two four-letter words concatenated.
 
-Constraints:
+These are generated from Unix's `/usr/share/dicts/words/`.
+
+Hints:
 * Second word begins with an uppercase letter.
 
 #### Level 3
 
-`pwgen -A 5`
+5 character mask generated via `pwgen -A 5`.
 
-Constraints:
+Hints:
 * **At least** one vowel.
 * **Exactly** one digit.
-* The digit at one of the last three indices.
+* The digit is at one of the last three indices.
 
 #### Level 4
 
-Wordlist scraped from the [SCSS](https://www.scss.tcd.ie//) and [Trinity](https://www.tcd.ie/) websites.
+Words scraped from the [SCSS](https://www.scss.tcd.ie//) and [Trinity](https://www.tcd.ie/) websites.
+
 Can use [CeWL](https://github.com/digininja/CeWL/) to do this.
 
 #### Level 5
 
-Submitty usernames.
+Submitty usernames can be cracked from the [SHA256 list](https://github.com/sftcd/cs7ns1/blob/master/assignments/practical5/TeamSelection.md) of students.
 
-Can be "found" on BlackBoard.
+Alternatively, these can be [found](https://tcd.blackboard.com/webapps/blackboard/execute/displayEmail?navItem=email_select_students&course_id=_52594_1) on BlackBoard.
 
 #### Level 6
 
@@ -98,7 +99,7 @@ Same as Level 1.
 
 #### Level 7
 
-Use [KwProcessor](https://github.com/hashcat/kwprocessor.git).
+Use [KwProcessor](https://github.com/hashcat/kwprocessor.git) to generate keyboard walks.
 
 [This](https://cyberarms.wordpress.com/2018/02/13/creating-hashcat-keymap-walking-password-wordlists/) guide details its usage.
 
@@ -108,8 +109,9 @@ Same as Level 1.
 
 #### Level 9
 
-Lord hear us.
 Uses [Crackstation](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm) wordlist.
+
+Ouch.
 
 ### Formats
 
@@ -130,13 +132,10 @@ I've formatted the hashes as follows: `share:hash`.
 | Type               | Device | Hashrate  |
 |:------------------ |:------:| ---------:|
 | PBKDF2-HMAC-SHA256 | P100   | 45,000c/S |
-|                    | 1080Ti | TODO      |
 |                    | c5.9x  | 17,700c/S |
 | sha1crypt          | P100   | 7,060c/S  |
-|                    | 1080Ti | TODO      |
 |                    | c5.9x  | 2,500c/S  |
 | sha512crypt        | P100   | 700c/S    |
-|                    | 1080Ti | TODO      |
 |                    | c5.9x  | 600c/S    |
 | argon2i            | c5.9x  | 100c/S    |
 
@@ -145,13 +144,6 @@ I've formatted the hashes as follows: `share:hash`.
 | Type        | Device | Hashrate |
 |:----------- |:------:| --------:|
 | sha512crypt | P100   | 1170H/s  |
-|             | 1080Ti | 150H/s   |
-
-### Software
-
-JohnTheRipper seems to work better than Hashcat for PBKDF2 hashes.
-
-Otherwise, Hashcat appears to be better.
 
 ## Instances
 
