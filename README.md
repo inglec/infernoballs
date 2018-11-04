@@ -78,7 +78,7 @@ In progress... (Ciarán)
 
 ##### Crackstation Big
 
-1. 
+1. -PBKDF-  8Char - Uppercase and Number
 
 ### Methods
 
