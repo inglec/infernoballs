@@ -43,14 +43,19 @@ This will write three files:
 
 [This](https://regexr.com/) website is really useful for learning and testing Regex.
 
-Get words of length 5-8 with just uppercase and digits:
+Get all words of length 5-8:
 ```
-cat <file> | egrep "^([0-9]|[A-Z]){5,8}$"
+cat <file> | egrep "^.{5,8}$"
 ```
 
 Get words of length 5-8 with just lowercase:
 ```
 cat <file> | egrep "^[a-z]{5,8}$"
+```
+
+Get words of length 5-8 with just uppercase and digits:
+```
+cat <file> | egrep "^([0-9]|[A-Z]){5,8}$"
 ```
 
 #### Crackstation
@@ -59,11 +64,6 @@ Download and extract [Crackstation](https://crackstation.net/crackstation-wordli
 ```
 wget https://crackstation.net/files/crackstation-human-only.txt.gz
 gunzip crackstation-human-only.txt.gz
-```
-
-Get 8-character passwords: 
-```
-cat crackstation-human-only.txt | grep ^.\\{8\\}$ > crackstation8.txt
 ```
 
 ## Hashes
