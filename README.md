@@ -68,6 +68,18 @@ gunzip crackstation-human-only.txt.gz
 
 ## Hashes
 
+### Progress
+
+#### Level 9
+
+##### Crackstation Small
+
+In progress... (Ciarán)
+
+##### Crackstation Big
+
+1. 
+
 ### Methods
 
 #### Level 1
