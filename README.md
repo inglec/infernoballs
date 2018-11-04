@@ -39,6 +39,20 @@ This will write three files:
 2. `infernoballN.secrets`
 3. `infernoballN.hashes`
 
+#### Regex
+
+[This](https://regexr.com/) website is really useful for learning and testing Regex.
+
+Get words of length 5-8 with just uppercase and digits:
+```
+cat <file> | egrep "^([0-9]|[A-Z]){5,8}$"
+```
+
+Get words of length 5-8 with just lowercase:
+```
+cat <file> | egrep "^[a-z]{5,8}$"
+```
+
 #### Crackstation
 
 Download and extract [Crackstation](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm) human passwords:
