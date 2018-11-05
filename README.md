@@ -21,7 +21,7 @@ sudo -H pip install secretsharing jsonpickle passlib argon2_cffi pycrypto
 
 Potfile to broken format (Only required for Hashcat):
 ```
-python formatter.py <hashes> <potfile> > output.broken
+python formatter.py [HASHES] [POTFILE] > output.broken
 ```
 
 Combine all hash files:
@@ -31,7 +31,7 @@ cat *.broken | sort | uniq > all.broken
 
 Decrypting the ciphertext for a given level:
 ```
-./as5-makeinferno.py -t decrypt -i <infernoball> -b <broken>
+./as5-makeinferno.py -t decrypt -i [INFERNOBALL] -b [BROKEN]
 ```
 
 This will write three files:
@@ -45,17 +45,17 @@ This will write three files:
 
 Get all words of length 5-8:
 ```
-cat <file> | egrep "^.{5,8}$"
+cat [FILE] | egrep "^.{5,8}$"
 ```
 
 Get words of length 5-8 with just lowercase:
 ```
-cat <file> | egrep "^[a-z]{5,8}$"
+cat [FILE] | egrep "^[a-z]{5,8}$"
 ```
 
 Get words of length 5-8 with just uppercase and digits:
 ```
-cat <file> | egrep "^([0-9]|[A-Z]){5,8}$"
+cat [FILE] | egrep "^([0-9]|[A-Z]){5,8}$"
 ```
 
 #### Crackstation
@@ -155,11 +155,11 @@ I've formatted the hashes as follows: `share:hash`.
 
 | Type               | Command                                                                          |
 |:------------------ |:-------------------------------------------------------------------------------- |
-| PBKDF2-HMAC-SHA256 | `jtr/run/john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=<wordlist> <hashes>` |
-| sha1crypt          | `jtr/run/john --format=sha1crypt-opencl --wordlist=<wordlist> <hashes>`          |
-| sha512crypt        | `jtr/run/john --format=sha512crypt-opencl --wordlist=<wordlist> <hashes>`        |
-|                    | `hashcat -a 0 -w 4 -O -m 1800 --username <wordlist> <hashes>`                    |
-| argon2i            | `jtr/run/john --format=argon2 --wordlist=<wordlist> <hashes>`                    |
+| PBKDF2-HMAC-SHA256 | `jtr/run/john --format=PBKDF2-HMAC-SHA256-opencl --wordlist=[WORDLIST] [HASHES]` |
+| sha1crypt          | `jtr/run/john --format=sha1crypt-opencl --wordlist=[WORDLIST] [HASHES]`          |
+| sha512crypt        | `jtr/run/john --format=sha512crypt-opencl --wordlist=[WORDLIST] [HASHES]`        |
+|                    | `hashcat -a 0 -w 4 -O -m 1800 --username [WORDLIST] [HASHES]`                    |
+| argon2i            | `jtr/run/john --format=argon2 --wordlist=[WORDLIST] [HASHES]`                    |
 
 ### Hashrates
 
