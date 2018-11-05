@@ -142,8 +142,24 @@ Same as Level 1.
 
 Uses [Crackstation](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm) wordlist.
 
-Hints:
-* Run far away.
+Get alphanumeric 5-8 character list:
+```
+egrep -a "^[A-Za-z0-9]{5,8}$" crackstation.txt > alphanumeric.txt
+```
+
+Possible regexes (should be performed on `alphanumeric.txt`):
+1. All numbers:
+```
+egrep "^[0-9]+$" alphanumeric.txt > output.txt
+```
+2. 1 number + lowercase:
+```
+egrep "^[0-9][a-z]+$" alphanumeric.txt > output.txt
+```
+3. 3 numbers + 5 letters:
+```
+egrep "^[0-9]{3}[a-zA-Z]{5}$" alphanumeric.txt > output.txt
+```
 
 ### Formats
 
