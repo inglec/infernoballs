@@ -148,6 +148,10 @@ egrep "^[0-9][a-z]+$" alphanumeric.txt > output.txt
 ```
 egrep "^[0-9]{3}[a-zA-Z]{5}$" alphanumeric.txt > output.txt
 ```
+4. All uppercase (10M entries):
+```
+egrep "^[A-Z]+$" alphanumeric.txt > output.txt
+```
 
 ### Formats
 
