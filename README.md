@@ -140,15 +140,11 @@ Possible regexes:
 ```
 egrep "^[0-9]+$" alphanumeric.txt > output.txt
 ```
-2. Numbers of just length 6-8 (?M entries):
-```
-egrep "^[0-9]{6,8}$" alphanumeric.txt > output.txt
-```
-3. 1 number + lowercase (13M entries):
+2. 1 number + lowercase (13M entries):
 ```
 egrep "^[0-9][a-z]+$" alphanumeric.txt > output.txt
 ```
-4. 3 numbers + 5 letters (1M entries):
+3. 3 numbers + 5 letters (1M entries):
 ```
 egrep "^[0-9]{3}[a-zA-Z]{5}$" alphanumeric.txt > output.txt
 ```
