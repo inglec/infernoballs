@@ -60,25 +60,13 @@ cat <file> | egrep "^([0-9]|[A-Z]){5,8}$"
 
 #### Crackstation
 
-Download and extract [Crackstation](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm) human passwords:
+Download and extract [Crackstation](https://crackstation.net/crackstation-wordlist-password-cracking-dictionary.htm) wordlist:
 ```
-wget https://crackstation.net/files/crackstation-human-only.txt.gz
-gunzip crackstation-human-only.txt.gz
+wget https://crackstation.net/files/crackstation.txt.gz
+gunzip crackstation.txt.gz
 ```
 
 ## Hashes
-
-### Progress
-
-#### Level 9
-
-##### Crackstation Small
-
-In progress... (Ciarán)
-
-##### Crackstation Big
-
-1. -PBKDF-  8Char - Uppercase and Number
 
 ### Methods
 
@@ -144,10 +132,10 @@ Uses [Crackstation](https://crackstation.net/crackstation-wordlist-password-crac
 
 Get alphanumeric 5-8 character list:
 ```
-egrep -a "^[A-Za-z0-9]{5,8}$" crackstation.txt > alphanumeric.txt
+egrep -a "^[a-zA-Z0-9]{5,8}$" crackstation.txt > alphanumeric.txt
 ```
 
-Possible regexes (should be performed on `alphanumeric.txt`):
+Possible regexes:
 1. All numbers:
 ```
 egrep "^[0-9]+$" alphanumeric.txt > output.txt
