@@ -136,21 +136,25 @@ egrep -a "^[a-zA-Z0-9]{5,8}$" crackstation.txt > alphanumeric.txt
 ```
 
 Possible regexes:
-1. All numbers (111M entries):
+1. All numbers \[111M\]:
 ```
 egrep "^[0-9]+$" alphanumeric.txt > output.txt
 ```
-2. 1 number + lowercase (13M entries):
+2. 1 number + lowercase \[13M\]:
 ```
-egrep "^[0-9][a-z]+$" alphanumeric.txt > output.txt
+egrep "^[0-9][a-z]{7}$" alphanumeric.txt > output.txt
 ```
-3. 3 numbers + 5 letters (1M entries):
+3. 3 numbers + 5 letters \[1M\]:
 ```
 egrep "^[0-9]{3}[a-zA-Z]{5}$" alphanumeric.txt > output.txt
 ```
-4. All uppercase (10M entries):
+4. All uppercase \[10M\]:
 ```
 egrep "^[A-Z]+$" alphanumeric.txt > output.txt
+```
+5. 5 characters (first uppercase) \[5.5M\]:
+```
+egrep "^[A-Z][a-z0-9]{4}$" alphanumeric.txt > output.txt
 ```
 
 ### Formats
