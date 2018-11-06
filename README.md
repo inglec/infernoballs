@@ -154,7 +154,7 @@ egrep "^[A-Z]+$" alphanumeric.txt > output.txt
 ```
 5. 5 characters (first uppercase) \[5.5M\]:
 ```
-egrep "^[A-Z][a-z0-9]{4}$" alphanumeric.txt > output.txt
+egrep "^[A-Z].{4}$" alphanumeric.txt > output.txt
 ```
 
 ### Formats
