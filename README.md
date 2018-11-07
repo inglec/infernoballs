@@ -50,9 +50,7 @@ screen
 
 You will need to press space a few times to return to the CLI.
 
-
 Leave the screen: `Ctrl+a` `Ctrl+d`.
-
 
 Resume a screen:
 ```
