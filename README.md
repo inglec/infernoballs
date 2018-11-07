@@ -39,23 +39,22 @@ This will write three files:
 2. `infernoballN.secrets`
 3. `infernoballN.hashes`
 
-#### Regex
+### Screen
 
-[This](https://regexr.com/) website is really useful for learning and testing Regex.
+You can run programs in the background using screen.
 
-Get all words of length 5-8:
+Create a new screen:
 ```
-cat [FILE] | egrep "^.{5,8}$"
-```
-
-Get words of length 5-8 with just lowercase:
-```
-cat [FILE] | egrep "^[a-z]{5,8}$"
+screen
 ```
 
-Get words of length 5-8 with just uppercase and digits:
+You will need to press space a few times to return to the CLI.
+
+Leave the screen: `Ctrl+a` `Ctrl+d`.
+
+Resume a screen:
 ```
-cat [FILE] | egrep "^([0-9]|[A-Z]){5,8}$"
+screen -r
 ```
 
 #### Crackstation
