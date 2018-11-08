@@ -19,11 +19,6 @@ sudo apt install python-pip
 sudo -H pip install secretsharing jsonpickle passlib argon2_cffi pycrypto
 ```
 
-Potfile to broken format (Only required for Hashcat):
-```
-python formatter.py [HASHES] [POTFILE] > output.broken
-```
-
 Combine all hash files:
 ```
 cat *.broken | sort | uniq > all.broken
@@ -38,6 +33,11 @@ This will write three files:
 1. `infernoballN.as5`
 2. `infernoballN.secrets`
 3. `infernoballN.hashes`
+
+Remove broken hashes from file:
+```
+python scripts/removeDuplicates.py hashes/infernoball[LEVEL].hashes broken/[HASH_TYPE].hashes > remaining.hashes
+```
 
 ### Screen
 
