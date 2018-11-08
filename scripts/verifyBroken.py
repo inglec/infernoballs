@@ -38,11 +38,16 @@ hashesSeen = set()
 print("Detected hash type " + hashType)
 for b in broken:
     b = b.strip()
-    hash = sharesToHashes[b.split(":")[0]]
+    split = b.split(':')
+    share = split[0]
+    word = split[1]
+    hash = sharesToHashes[share]
 
+    # Check if all hashes are of the same type.
     if hashType not in hash:
         print(hash + "(" + b + ") does not match type " + hashType)
 
+    # Check for duplicate hashes.
     if hash in hashesSeen:
         print("Duplicate " + b)
     hashesSeen.add(hash)
