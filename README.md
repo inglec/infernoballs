@@ -158,7 +158,7 @@ egrep "^[A-Z].{4}$" alphanumeric.txt > output.txt
 
 Get remaining words from wordlist:
 ```
-egrep "(^[0-9]+$)|(^[0-9][a-z]{7}$)|(^[A-Z].{4}$)" alphanumeric.txt > remaining.txt
+egrep -v "(^[0-9]+$)|(^[0-9][a-z]{7}$)|(^[0-9]{3}[a-zA-Z]{5}$)|(^[A-Z]+$)|(^[A-Z].{4}$)" alphanumeric.txt > remaining.txt
 ```
 
 Progress:
