@@ -21,3 +21,4 @@ mv temp.txt john.txt
 # Add new hashes into duplicate.
 cat john.txt $BROKEN | sort | uniq > temp.txt
 mv temp.txt $BROKEN
+rm john.txt
