@@ -156,6 +156,18 @@ egrep "^[A-Z]+$" alphanumeric.txt > output.txt
 egrep "^[A-Z].{4}$" alphanumeric.txt > output.txt
 ```
 
+Get remaining words from wordlist:
+```
+egrep "(^[0-9]+$)|(^[0-9][a-z]{7}$)|(^[A-Z].{4}$)" alphanumeric.txt > remaining.txt
+```
+
+Progress:
+* Numbers 5+6: Done (Debrup)
+* Numbers 7: Done (Ciarán)
+* Numbers 8: In progress... (Sridhar)
+* 3 numbers + 5 letters: Done (Debrup)
+* 1 number + 7 lowercase: Done (Sridhar)
+
 ### Formats
 
 I've formatted the hashes as follows: `share:hash`.
