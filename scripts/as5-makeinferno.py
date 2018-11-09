@@ -337,8 +337,11 @@ def recoverSecret(args):
     secret = pwds_shares_to_secret(words, indices, shares)
     print "Calculated secret: " + secret
 
+    print secret.zfill(32)
+
     # Decrypt next level of infernoball.
-    nextInfernoball = decrypt(infernoball['ciphertext'], secret.zfill(32).decode('hex'));
+    secretBase64 = secret.zfill(32).decode('hex')
+    nextInfernoball = decrypt(infernoball['ciphertext'], secretBase64);
 
     # Check if decryption worked.
     if 'ciphertext' in nextInfernoball:
