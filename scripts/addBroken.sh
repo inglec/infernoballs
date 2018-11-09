@@ -7,9 +7,9 @@ ARGON="argon2i"
 
 INFERNOBALLS_DIR="$HOME/infernoballs"
 JOHN_DIR="$HOME/jtr"
-LEVEL=9
+LEVEL=10
 
-HASHTYPE=$SHA1
+HASHTYPE=$PBK
 HASHES="$INFERNOBALLS_DIR/hashes/infernoball$LEVEL.hashes"
 BROKEN="$INFERNOBALLS_DIR/broken/level$LEVEL/$HASHTYPE.broken"
 
